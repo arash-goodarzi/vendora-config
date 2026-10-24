@@ -1,0 +1,7 @@
+# Shared configuration for Vendora microservices
+server:
+  shutdown: graceful
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
