@@ -1,0 +1,34 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: customers-service
+    
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka-service:8010/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Customer Service
+    description: Vendora shopping customer microservice
+    version: 1.0.0
