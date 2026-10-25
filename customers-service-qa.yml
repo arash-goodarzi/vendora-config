@@ -10,6 +10,4 @@ spring:
       ddl-auto: validate
     show-sql: false
 
-  h2:
-    console:
-      enabled: false
+
