@@ -1,0 +1,49 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: shipment-service
+
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: shipment-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.value.default.type: com.vendora.shipment_service.dto.PaymentEvent
+        spring.json.use.type.headers: false
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka-service:8010/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Shipment Service
+    description: Vendora shopping shipment microservice
+    version: 1.0.0
+
+
