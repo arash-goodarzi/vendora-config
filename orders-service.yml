@@ -1,0 +1,44 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: orders-service
+
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: orders-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.value.default.type: com.vendora.orders_service.dto.PaymentEvent
+        spring.json.use.type.headers: false
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka-service:8010/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Order Service
+    description: Vendora shopping order microservice
+    version: 1.0.0
