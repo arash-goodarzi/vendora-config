@@ -1,0 +1,33 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: eureka-service
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: always
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Eureka Service
+    description: Vendora shopping eureka microservice
+    version: 1.0.0
