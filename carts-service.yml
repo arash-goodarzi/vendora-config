@@ -32,6 +32,10 @@ management:
       export:
         otlp:
           endpoint: http://tempo:4318/v1/traces
+  otlp:
+    metrics:
+      export:
+        enabled: false
   info:
     env:
       enabled: true
