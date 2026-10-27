@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: payments-service
+    name: payment-service
 
   kafka:
     bootstrap-servers: kafka:9092
