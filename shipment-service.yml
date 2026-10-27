@@ -6,7 +6,7 @@ spring:
     name: shipment-service
 
   kafka:
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: kafka:29092
     consumer:
       group-id: shipment-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
