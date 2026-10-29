@@ -59,7 +59,7 @@ info:
     version: 1.0.0
 logging:
   pattern:
-    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+    level: "%5p [${spring.application.name:},traceId=%X{traceId:-},spanId=%X{spanId:-}]"
   level:
     com.vendora.gateway: DEBUG
     org.springframework.cloud.gateway: DEBUG
