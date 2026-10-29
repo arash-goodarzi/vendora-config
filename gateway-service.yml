@@ -25,7 +25,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info,prometheus,gateway,env,configprops
+        include: health,info,prometheus,gateway,conditions
   endpoint:
     health:
       show-details: always
