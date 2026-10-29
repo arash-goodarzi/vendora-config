@@ -57,7 +57,13 @@ info:
     name: Gateway Service
     description: Vendora shopping gateway microservice
     version: 1.0.0
-
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},traceId=%X{traceId:-},spanId=%X{spanId:-}]"
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.security: DEBUG
+    reactor.netty.http.server: DEBUG
 
 
 
