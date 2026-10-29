@@ -45,3 +45,7 @@ info:
     name: Customer Service
     description: Vendora shopping customer microservice
     version: 1.0.0
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},traceId=%X{traceId:-},spanId=%X{spanId:-}]"
