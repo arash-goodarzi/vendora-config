@@ -74,7 +74,7 @@ logging:
 resilience4j:
   circuitbreaker:
     instances:
-      CartFeignClientgetCartByCustomerId:
+      CartFeignClientgetCartByCustomerIdLong:
         slidingWindowType: COUNT_BASED
         slidingWindowSize: 10
         minimumNumberOfCalls: 5
@@ -84,6 +84,6 @@ resilience4j:
 
   timelimiter:
     instances:
-      CartFeignClientgetCartByCustomerId:
+      CartFeignClientgetCartByCustomerIdLong:
         timeoutDuration: 3s
 
