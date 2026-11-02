@@ -25,18 +25,6 @@ spring:
         alphanumeric-ids:
           enabled: true
 
-  security:
-    oauth2:
-      client:
-        registration:
-          keycloak:
-            client-id: order-service
-            client-secret: YOUR_CLIENT_SECRET
-            authorization-grant-type: client_credentials
-            scope: openid
-        provider:
-          keycloak:
-            token-uri: http://keycloak:8080/realms/vendora_realms/protocol/openid-connect/token
 eureka:
   instance:
     prefer-ip-address: true
