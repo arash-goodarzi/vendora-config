@@ -81,6 +81,8 @@ resilience4j:
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
         permittedNumberOfCallsInHalfOpenState: 3
+      PaymentFeignClientcreatePaymentPaymentDto:
+        timeoutDuration: 5s
 
   timelimiter:
     instances:
