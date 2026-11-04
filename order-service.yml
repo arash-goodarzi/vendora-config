@@ -86,8 +86,4 @@ resilience4j:
       PaymentFeignClientcreatePaymentPaymentDto:
         timeoutDuration: 5s
 
-  timelimiter:
-    instances:
-      CartFeignClientgetCartByCustomerIdLong:
-        timeoutDuration: 3s
 
