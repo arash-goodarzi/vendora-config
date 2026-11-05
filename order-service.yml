@@ -80,6 +80,7 @@ resilience4j:
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
+        automaticTransitionFromOpenToHalfOpenEnabled: true
         permittedNumberOfCallsInHalfOpenState: 3
         ignoreExceptions:
           - "feign.FeignException$NotFound"
@@ -90,6 +91,7 @@ resilience4j:
         minimumNumberOfCalls: 5
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
+        automaticTransitionFromOpenToHalfOpenEnabled: true
         permittedNumberOfCallsInHalfOpenState: 3
         ignoreExceptions:
           - "feign.FeignException$NotFound"
