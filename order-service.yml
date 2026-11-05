@@ -84,9 +84,22 @@ resilience4j:
         ignoreExceptions:
           - "feign.FeignException$NotFound"
           
+      ProductFeignClientgetProductsByIdsList:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        minimumNumberOfCalls: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+        ignoreExceptions:
+          - "feign.FeignException$NotFound"
+          
   timelimiter:
     instances:
       PaymentFeignClientcreatePaymentPaymentDto:
+        timeoutDuration: 5s
+
+      ProductFeignClientgetProductsByIdsList:
         timeoutDuration: 5s
 
 
