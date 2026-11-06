@@ -142,10 +142,25 @@ resilience4j:
           
   timelimiter:
     instances:
-      PaymentFeignClientcreatePaymentPaymentDto:
+      CartFeignClientgetCartByCustomerIdLong:
         timeoutDuration: 5s
 
       ProductFeignClientgetProductsByIdsList:
+        timeoutDuration: 5s
+
+      InventoryFeignClientgetListOfInventoryByProductIdsList:
+        timeoutDuration: 5s
+
+      InventoryFeignClientreserveStockForOrderList:
+        timeoutDuration: 5s
+
+      InventoryFeignClientconfirmStockReservationsLong:
+        timeoutDuration: 5s
+
+      InventoryFeignClientreleaseReservationsLong:
+        timeoutDuration: 5s
+
+      PaymentFeignClientcreatePaymentPaymentDto:
         timeoutDuration: 5s
 
 
