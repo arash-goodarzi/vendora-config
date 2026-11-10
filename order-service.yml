@@ -174,7 +174,11 @@ resilience4j:
       PaymentFeignClientcreatePaymentPaymentDto:
         timeoutDuration: 5s
 
-
+  retry:
+    instances:
+      cartRetry:
+        max-attempts: 3
+        wait-duration: 1s
 
         
 
