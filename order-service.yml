@@ -184,5 +184,7 @@ resilience4j:
         max-attempts: 3
         wait-duration: 1s
         
-
+      inventoryGetListRetry:
+        max-attempts: 3
+        wait-duration: 1s
 
