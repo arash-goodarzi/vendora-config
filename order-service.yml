@@ -188,14 +188,21 @@ resilience4j:
         max-attempts: 3
         wait-duration: 1s
 
-      reservationInventoryWithRetry:
+      reservationReservationsWithRetry:
         max-attempts: 3
         wait-duration: 1s
 
-      releaseInventoryWithRetry:
+      releaseReservationsWithRetry:
         max-attempts: 3
         wait-duration: 1s
 
+      confirmReservationsWithRetry:
+        max-attempts: 3
+        wait-duration: 1s
+
+      paymentRetry:
+        max-attempts: 3
+        wait-duration: 1s
 
 
 
