@@ -29,6 +29,9 @@ spring:
         alphanumeric-ids:
           enabled: true
 
+      micrometer:
+        enabled: true 
+
 eureka:
   instance:
     prefer-ip-address: true
