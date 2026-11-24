@@ -4,6 +4,16 @@ server:
 spring:
   application:
     name: product-service
+  data:
+    redis:
+      host: redis
+      port: 6379
+
+  cache:
+    type: redis
+    cache-names: promotionalProducts
+    redis:
+      time-to-live: 10m
     
 eureka:
   instance:
